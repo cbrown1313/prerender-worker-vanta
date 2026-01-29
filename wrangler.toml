@@ -1,4 +1,4 @@
-name = "smartsites360"
+name = "vantacmo"
 main = "worker.js"
 compatibility_date = "2025-12-01"
 compatibility_flags = ["nodejs_compat"]
