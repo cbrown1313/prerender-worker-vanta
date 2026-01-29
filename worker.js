@@ -33,7 +33,7 @@ const BOT_UA = [
   /XML[- ]?Sitemaps/i,
 ];
 
-const ORIGIN = "https://smart-sites-360.lovable.app";
+const ORIGIN = "https://vantacmo.lovable.app";
 
 // Paths you generally do NOT want to prerender/cache
 const SKIP_PATH_PREFIXES = [
