@@ -95,7 +95,7 @@ export default {
     // Humans: passthrough
     if (!isBot) {
       const normalRes = await fetch(normalizeTarget(url), req);
-      return addDebugHeaders(normalRes, { "x-worker": "prerender-worker" });
+      return addDebugHeaders(normalRes, { "x-worker": "prerender-worker-vanta" });
     }
 
     // Bots: cache + prerender
@@ -141,7 +141,7 @@ export default {
         // (Better to crawl something than 500.)
         const fallbackRes = await fetch(normalizeTarget(url), req);
         return addDebugHeaders(fallbackRes, {
-          "x-worker": "prerender-worker",
+          "x-worker": "prerender-worker-vanta",
           "x-prerender": "0",
           "x-prerender-error": "1",
         });
@@ -150,7 +150,7 @@ export default {
 
     // Add optional debug headers
     const out = addDebugHeaders(res, {
-      "x-worker": "prerender-worker",
+      "x-worker": "prerender-worker-vanta",
       "x-prerender": "1",
       "x-prerender-cache": hit ? "HIT" : "MISS",
       "x-served-by": hit ? "cache" : "cf-browser-rendering",
